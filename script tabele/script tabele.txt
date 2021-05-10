@@ -1,0 +1,51 @@
+
+create schema partsshop;
+
+use
+    partsshop;
+drop table user;
+create table if not exists user
+(
+    user_id int (225) auto_increment primary key ,
+    name varchar(225),
+    email varchar(225),UNIQUE (email)
+
+
+);
+create table if not exists part
+(
+    part_id int (225) auto_increment primary key ,
+    partname varchar(225)
+
+);
+drop table engineparts;
+create table if not exists engineparts
+(
+    part_id int (225) auto_increment primary key ,
+    partname varchar(225),
+    price int,
+    pieces int
+
+);
+drop table brakesparts;
+drop table suspensionparts;
+create table if not exists brakesparts
+(
+    part_id int (225) auto_increment primary key ,
+    partname varchar(225),
+    price int,
+    pieces int
+
+);
+create table if not exists suspensionparts
+(
+    part_id int (225) auto_increment primary key ,
+    partname varchar(225),
+    price int,
+    pieces int
+
+);
+insert into user
+VALUES (1,'cezar','cezar@gmail.com');
+insert into suspensionparts
+VALUES (2,'shock absorber',1000,2) ;
